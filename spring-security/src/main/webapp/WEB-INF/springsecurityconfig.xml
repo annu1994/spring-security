@@ -6,8 +6,8 @@
 		http://www.springframework.org/schema/security
 		http://www.springframework.org/schema/security/spring-security.xsd">
 
-	<http>
-		<intercept-url pattern="/auth*" access="ROLE_USER" />
+	<http auto-config="true">
+		<intercept-url pattern="/auth*" access="hasRole('ROLE_USER')" />
 		<http-basic />
 	</http>
 
